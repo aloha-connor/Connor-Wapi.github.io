@@ -9,25 +9,37 @@
   
   <url>
     <loc>https://connor-wapi.github.io/</loc>
-    <lastmod>2020-07-31T13:42:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://connor-wapi.github.io/posts/hello-world/</loc>
-    <lastmod>2020-07-31T13:42:52+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://connor-wapi.github.io/posts/</loc>
-    <lastmod>2020-07-31T13:42:52+09:00</lastmod>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://connor-wapi.github.io/categories/</loc>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/posts/hello-world/</loc>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/posts/</loc>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://connor-wapi.github.io/tags/</loc>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/tags/test/</loc>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/categories/test/</loc>
+    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
   </url>
   
 </urlset>
