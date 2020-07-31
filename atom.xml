@@ -2,30 +2,30 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title type="text">Hugo Theme MemE</title>
+    <title type="text">게임 프로그래머가 되어보자</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2020-07-01T01:16:06&#43;09:00</updated>
-    <id>https://example.com/</id>
-    <link rel="alternate" type="text/html" href="https://example.com/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
+    <updated>2020-07-31T16:55:25&#43;09:00</updated>
+    <id>https://connor-wapi.github.io/</id>
+    <link rel="alternate" type="text/html" href="https://connor-wapi.github.io/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://connor-wapi.github.io/atom.xml" />
     <author>
-            <name>reuixiy</name>
-            <uri>https://example.com/</uri>
+            <name>Connor</name>
+            <uri>https://connor-wapi.github.io/</uri>
             
-                <email>reuixiy@gmail.com</email>
+                <email>guido9411@gmail.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.73.0">Hugo</generator>
         <entry>
             <title type="text">Hello World</title>
-            <link rel="alternate" type="text/html" href="https://example.com/posts/hello-world/" />
-            <id>https://example.com/posts/hello-world/</id>
-            <updated>2020-07-01T00:52:32&#43;09:00</updated>
+            <link rel="alternate" type="text/html" href="https://connor-wapi.github.io/posts/hello-world/" />
+            <id>https://connor-wapi.github.io/posts/hello-world/</id>
+            <updated>2020-07-31T13:42:52&#43;09:00</updated>
             <published>2020-07-01T00:33:25&#43;09:00</published>
             <author>
-                    <name>reuixiy</name>
-                    <uri>https://io-oi.me/</uri>
-                    <email>reuixiy@gmail.com</email>
+                    <name>Connor</name>
+                    <uri>https://connor-wapi.github.io/</uri>
+                    <email>guido9411@gmail.com</email>
                     </author>
             <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html"></summary>
             
