@@ -9,7 +9,7 @@
     <channel>
         <title>게임 만드는 사람이 사는 법</title>
         <link>https://connor-wapi.github.io/</link>
-        <description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description>
+        <description>스타트업에서 일하는 게임 클라이언트 개발자가 사는 곳입니다.</description>
         <generator>Hugo 0.73.0 https://gohugo.io/</generator>
         
             <language>ko</language>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Sun, 23 Aug 2020 16:42:15 &#43;0900</lastBuildDate>
+        <lastBuildDate>Sun, 23 Aug 2020 21:14:05 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://connor-wapi.github.io/rss.xml" />
         
