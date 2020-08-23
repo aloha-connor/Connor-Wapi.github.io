@@ -12,9 +12,9 @@
     
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
-    <title>Hello World | 게임 만드는 사람이 사는 법</title>
+    <title>[Unity] 유니티 안드로이드 Target API Level 29 설정하기 | 게임 만드는 사람이 사는 법</title>
 
-    <link rel="stylesheet" href="/css/meme.min.01ab490ce5ff2ae93c3c43037caffd87d8c3dc478d0e7e6b60cf8e7c694684bd.css" integrity="sha256-AatJDOX/Kuk8PEMDfK/9h9jD3EeNDn5rYM&#43;OfGlGhL0=" />
+    <link rel="stylesheet" href="/css/meme.min.eeb38e0af1177acadf8099bf9d2b13b0b7629b24e196b630fe3ec4100d329abc.css" integrity="sha256-7rOOCvEXesrfgJm/nSsTsLdimyThlrYw/j7EEA0ymrw=" />
 
     
     
@@ -27,8 +27,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Sans&#43;KR&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Sans&#43;KR&amp;display=swap" /></noscript>
 
-    <meta name="author" content="Connor" /><meta name="description" content="안녕하세요 테스트입니다. 테스트다? ㅇㅇㅇㅇ
-ㅇㅇㅇ" />
+    <meta name="author" content="Connor" /><meta name="description" content="이 글은 Windows를 기준으로 작성되었습니다. 하지만 Mac이나 기타 운영체제에서도 sdkmanager를 같은 방식으로 실행시키면 됩니다.
+ 최근에 구글 플레이 정책이 바뀌면서 8월부터는 Android SDK의 Target API Level이 29 이상이어야 앱을 구글 플레이 콘솔에 올릴 수 있게 되었다.
+유니티 에디터에서 Target API Level 29 또는 30을 선택하여 빌드를 돌려보면 해당 버전이 설치되어있지 않다고 업데이트를 요구하지만…   막상 업데이트를 누르면 다음과 같은 에러가 뜬다." />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -47,22 +48,22 @@
     
 
     
-    <link rel="canonical" href="https://connor-wapi.github.io/posts/hello-world/" />
+    <link rel="canonical" href="https://connor-wapi.github.io/posts/api29/" />
     
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
-        "datePublished": "2020-07-01T00:33:25+09:00",
-        "dateModified": "2020-07-31T17:23:09+09:00",
-        "url": "https://connor-wapi.github.io/posts/hello-world/",
-        "headline": "Hello World",
-        "description": "안녕하세요 테스트입니다. 테스트다? ㅇㅇㅇㅇ\nㅇㅇㅇ",
+        "datePublished": "2020-08-22T16:51:00+09:00",
+        "dateModified": "2020-08-23T16:24:03+09:00",
+        "url": "https://connor-wapi.github.io/posts/api29/",
+        "headline": "[Unity] 유니티 안드로이드 Target API Level 29 설정하기",
+        "description": "이 글은 Windows를 기준으로 작성되었습니다. 하지만 Mac이나 기타 운영체제에서도 sdkmanager를 같은 방식으로 실행시키면 됩니다.\n 최근에 구글 플레이 정책이 바뀌면서 8월부터는 Android SDK의 Target API Level이 29 이상이어야 앱을 구글 플레이 콘솔에 올릴 수 있게 되었다.\n유니티 에디터에서 Target API Level 29 또는 30을 선택하여 빌드를 돌려보면 해당 버전이 설치되어있지 않다고 업데이트를 요구하지만…   막상 업데이트를 누르면 다음과 같은 에러가 뜬다.",
         "inLanguage" : "ko",
         "articleSection": "posts",
-        "wordCount":  5 ,
-        "image": ["https://mblogthumb-phinf.pstatic.net/20140926_176/redslate_1411741830380j5Kou_PNG/1.png?type=w2"],
+        "wordCount":  319 ,
+        "image": ["https://connor-wapi.github.io/image/api29/api29.JPG","https://connor-wapi.github.io/image/api29/api29%282%29.JPG","https://connor-wapi.github.io/image/api29/sdk_path.JPG","https://connor-wapi.github.io/image/api29/sdk_folder.JPG","https://connor-wapi.github.io/image/api29/powershell_admin.png","https://connor-wapi.github.io/image/api29/powershell1.JPG","https://connor-wapi.github.io/image/api29/accept.JPG"],
         "author": {
             "@type": "Person",
             "description": "돈 많은 프로그래머가 되어보자",
@@ -99,15 +100,16 @@
 
 
 
-<meta property="og:title" content="Hello World" />
-<meta property="og:description" content="안녕하세요 테스트입니다. 테스트다? ㅇㅇㅇㅇ
-ㅇㅇㅇ" />
-<meta property="og:url" content="https://connor-wapi.github.io/posts/hello-world/" />
+<meta property="og:title" content="[Unity] 유니티 안드로이드 Target API Level 29 설정하기" />
+<meta property="og:description" content="이 글은 Windows를 기준으로 작성되었습니다. 하지만 Mac이나 기타 운영체제에서도 sdkmanager를 같은 방식으로 실행시키면 됩니다.
+ 최근에 구글 플레이 정책이 바뀌면서 8월부터는 Android SDK의 Target API Level이 29 이상이어야 앱을 구글 플레이 콘솔에 올릴 수 있게 되었다.
+유니티 에디터에서 Target API Level 29 또는 30을 선택하여 빌드를 돌려보면 해당 버전이 설치되어있지 않다고 업데이트를 요구하지만…   막상 업데이트를 누르면 다음과 같은 에러가 뜬다." />
+<meta property="og:url" content="https://connor-wapi.github.io/posts/api29/" />
 <meta property="og:site_name" content="게임 만드는 사람이 사는 법" />
-<meta property="og:locale" content="ko" /><meta property="og:image" content="https://mblogthumb-phinf.pstatic.net/20140926_176/redslate_1411741830380j5Kou_PNG/1.png?type=w2" />
+<meta property="og:locale" content="ko" /><meta property="og:image" content="https://connor-wapi.github.io/image/api29/api29.JPG" />
 <meta property="og:type" content="article" />
-    <meta property="article:published_time" content="2020-07-01T00:33:25&#43;09:00" />
-    <meta property="article:modified_time" content="2020-07-31T17:23:09&#43;09:00" />
+    <meta property="article:published_time" content="2020-08-22T16:51:00&#43;09:00" />
+    <meta property="article:modified_time" content="2020-08-23T16:24:03&#43;09:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -198,6 +200,16 @@
 </nav>
 
                     
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176038414-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176038414-1');
+</script>
+
+<script data-ad-client="ca-pub-5775000216490319" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 </div>
             </div>
             
@@ -219,9 +231,9 @@
 
         
 
-        <article class="content post" data-small-caps="true" data-align="default" data-type="posts" data-toc-num="true">
+        <article class="content post" data-align="default" data-type="posts" data-toc-num="true">
 
-            <h1 class="post-title">Hello World</h1>
+            <h1 class="post-title">[Unity] 유니티 안드로이드 Target API Level 29 설정하기</h1>
 
             
 
@@ -235,11 +247,11 @@
 <div class="post-meta">
     
         
-        <time datetime="2020-07-01T00:33:25&#43;09:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.7.1</time>
+        <time datetime="2020-08-22T16:51:00&#43;09:00" class="post-meta-item published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2020.8.22</time>
     
     
         
-        <time datetime="2020-07-31T17:23:09&#43;09:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.7.31</time>
+        <time datetime="2020-08-23T16:24:03&#43;09:00" class="post-meta-item modified"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2020.8.23</time>
     
     
     
@@ -247,17 +259,17 @@
         
         
             
-                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/test/" class="category-link">test</a></span>
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/unity/" class="category-link">Unity</a></span>
             
         
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;5</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;319</span>
     
     
         
-        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;1&nbsp;</span>
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;2&nbsp;</span>
     
     
     
@@ -266,12 +278,58 @@
             
 
             <div class="post-body">
-              <h1 id="안녕하세요"><a href="#안녕하세요" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>안녕하세요</h1>
-<h6 id="테스트입니다"><a href="#테스트입니다" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a>테스트입니다.</h6>
-<p>테스트다?
-ㅇㅇㅇㅇ</p>
-<p>ㅇㅇㅇ</p>
-<p><img src="https://mblogthumb-phinf.pstatic.net/20140926_176/redslate_1411741830380j5Kou_PNG/1.png?type=w2" alt="screenshot"></p>
+              <p><em>이 글은 Windows를 기준으로 작성되었습니다. 하지만 Mac이나 기타 운영체제에서도 sdkmanager를 같은 방식으로 실행시키면 됩니다.</em></p>
+<hr>
+<p>최근에 구글 플레이 정책이 바뀌면서 8월부터는 Android SDK의 Target API Level이 29 이상이어야 앱을 구글 플레이 콘솔에 올릴 수 있게 되었다.</p>
+<p>유니티 에디터에서 Target API Level 29 또는 30을 선택하여 빌드를 돌려보면 해당 버전이 설치되어있지 않다고 업데이트를 요구하지만&hellip;
+<figure>
+    <img src="/image/api29/api29.JPG"/> 
+</figure>
+</p>
+<p>막상 업데이트를 누르면 다음과 같은 에러가 뜬다.
+<figure>
+    <img src="/image/api29/api29%282%29.JPG"/> 
+</figure>
+</p>
+<p>이는 SDK 버전 업데이트를 담당하는 SDK manager가 업데이트를 위해 관리자 권한을 필요로하기 때문인데, 유니티를 관리자 권한으로 실행한다고 해결되지는 않고 SDK manager를 직접 찾아서 관리자 권한으로 업데이트를 실행시켜줘야 한다.</p>
+<p>유니티 자체를 관리자 권한으로 실행시켜주면 바로 된다는 사람도 있는데 이렇게 되면 해피한 거고 나는 안돼서 이 방법으로 처리했다.</p>
+<p>유니티 에디터에서 Edit &gt; Preferences &gt; External Tools에 들어가보면 현재 유니티가 사용하고있는 Android SDK Tools의 경로를 찾을 수 있다.
+<figure>
+    <img src="/image/api29/sdk_path.JPG"/> 
+</figure>
+</p>
+<p>유니티 허브로 설치했으면 유니티 허브, 따로 설치했으면 해당 폴더 내부의 경로가 있을 것이다. 여기서 tools &gt; bin을 열어보면 우리가 필요한 sdkmanager.bat파일이 있다.
+<figure>
+    <img src="/image/api29/sdk_folder.JPG"/> 
+</figure>
+</p>
+<p>하지만 여기서 바로 실행시키는 건 아니고, Windows PowerShell을 관리자 권한으로 실행해서 접근해야한다. Windows + x키를 눌러 <strong>Windows PowerShell(관리자)</strong> 를 실행시킨다.
+<figure>
+    <img src="/image/api29/powershell_admin.png"/> 
+</figure>
+</p>
+<p>PowerShell을 열었으면 유니티에서 Android SDK의 경로를 복사한 뒤, 뒤에 /tools/bin을 붙여 폴더를 PowerShell에서 열어주자. 아래의 명령어를 치면 된다.</p>
+<pre><code>cd &quot;[복사한 경로]/tools/bin&quot;
+</code></pre><p>내 기준으로는</p>
+<pre><code>cd &quot;C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer\SDK/tools/bin&quot;
+</code></pre><p>이라고 입력했다. 경로 중간에 띄어쓰기가 없으면 큰따옴표를 생략해도 되지만, 윈도우에서는 대부분 Program Files때문에 띄어쓰기가 있을테니 반드시 큰따옴표를 쳐주자.
+<figure>
+    <img src="/image/api29/powershell1.JPG"/> 
+</figure>
+</p>
+<p>PowerShell에서 폴더를 연 후에 <code>./sdkmanager --list</code>를 입력해 sdkmanager가 정상적으로 작동하는지 확인할 수 있다.</p>
+<p><strong>만약 이때 Java관련 에러가 뜨면서 sdkmanager가 실행되지 않는다면 Java 버전에 문제가 있는 것인데,
+시스템 환경 변수 편집으로 들어가서 JAVA_HOME을 유니티 허브에서 설치한 제공하는 OpenJDK의 경로로 변경해주면 된다.</strong> Java 환경 변수 설정 관련은 글이 너무 길어지니까 여기선 생략.</p>
+<p>이제 다 왔다. <code>./sdkmanager &quot;platform-tools&quot; &quot;platforms;android-29&quot; &quot;build-tools;29.0.3&quot;</code>을 입력하면 무언가 동의하냐는 문서가 출력되고, 어차피 우리에게 선택권이 없으니 y를 눌러 동의하면 필요한 파일들이 모두 설치된다.
+<figure>
+    <img src="/image/api29/accept.JPG"
+         alt="어차피 개발자는 거절할 권리가 없다."/> <figcaption>
+            <p>어차피 개발자는 거절할 권리가 없다.</p>
+        </figcaption>
+</figure>
+</p>
+<p>PowerShell을 관리자 권한으로 실행하지 않았다면 여기서 오류가 나며 막힐텐데, 관리자 권한으로 다시 실행해주면 된다.</p>
+<p>이렇게 설치를 완료하면 유니티에서 Target API Level을 29로 설정하고 빌드해도 군말없이 잘 돌아간다! 특이사항이 없어서 스크린샷은 생략.</p>
 
             </div>
 
@@ -289,7 +347,7 @@
                 
                 
                 
-                <li class="copyright-item link"><span class="copyright-item-text"></span><a href="/posts/hello-world/" target="_blank" rel="noopener">https://connor-wapi.github.io/posts/hello-world/</a></li>
+                <li class="copyright-item link"><span class="copyright-item-text"></span><a href="/posts/api29/" target="_blank" rel="noopener">https://connor-wapi.github.io/posts/api29/</a></li>
             
             <li class="copyright-item license"><span class="copyright-item-text"></span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
             
@@ -300,9 +358,9 @@
 
         
     <div class="updated-badge-container">
-        <span title="Updated @ 2020-07-31 17:23:09 KST" style="cursor:help">
+        <span title="Updated @ 2020-08-23 16:24:03 KST" style="cursor:help">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-07-31</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-07-31</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2020-08-23</text><text x="915" y="140" textLength="650" transform="scale(.1)">2020-08-23</text></g></svg>
         </span></div>
 
 
@@ -319,14 +377,14 @@
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://connor-wapi.github.io/posts/hello-world/&amp;text=Hello%20World&amp;hashtags=test,&amp;via=reuixiy" title="" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://connor-wapi.github.io/posts/api29/&amp;text=[Unity]%20%ec%9c%a0%eb%8b%88%ed%8b%b0%20%ec%95%88%eb%93%9c%eb%a1%9c%ec%9d%b4%eb%93%9c%20Target%20API%20Level%2029%20%ec%84%a4%ec%a0%95%ed%95%98%ea%b8%b0&amp;hashtags=unity,build,android,&amp;via=reuixiy" title="" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item facebook">
                     
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://connor-wapi.github.io/posts/hello-world/&amp;hashtag=%23test" title="" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://connor-wapi.github.io/posts/api29/&amp;hashtag=%23unity" title="" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
                 </div>
             
 
@@ -352,7 +410,7 @@
     var typeNumber = 0;
     var errorCorrectionLevel = 'L';
     var qr = qrcode(typeNumber, errorCorrectionLevel);
-    qr.addData('https:\/\/connor-wapi.github.io\/posts\/hello-world\/');
+    qr.addData('https:\/\/connor-wapi.github.io\/posts\/api29\/');
     qr.make();
     document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
 </script>
@@ -382,7 +440,23 @@
                 
                 
                     
-                    <a href="/tags/test/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>test</a>
+                    <a href="/tags/unity/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>unity</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/build/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>build</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/android/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>android</a>
                 
             
         </div>

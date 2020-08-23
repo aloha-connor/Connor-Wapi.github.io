@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-    <title type="text">게임 프로그래머가 되어보자</title>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko">
+    <title type="text">게임 만드는 사람이 사는 법</title>
     <subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle>
-    <updated>2020-07-31T20:11:42&#43;09:00</updated>
+    <updated>2020-08-23T16:25:43&#43;09:00</updated>
     <id>https://connor-wapi.github.io/</id>
     <link rel="alternate" type="text/html" href="https://connor-wapi.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://connor-wapi.github.io/atom.xml" />
@@ -17,25 +17,72 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights>
     <generator uri="https://gohugo.io/" version="0.73.0">Hugo</generator>
         <entry>
-            <title type="text">Hello World</title>
-            <link rel="alternate" type="text/html" href="https://connor-wapi.github.io/posts/hello-world/" />
-            <id>https://connor-wapi.github.io/posts/hello-world/</id>
-            <updated>2020-07-31T17:23:09&#43;09:00</updated>
-            <published>2020-07-01T00:33:25&#43;09:00</published>
+            <title type="text">[Unity] 유니티 안드로이드 Target API Level 29 설정하기</title>
+            <link rel="alternate" type="text/html" href="https://connor-wapi.github.io/posts/api29/" />
+            <id>https://connor-wapi.github.io/posts/api29/</id>
+            <updated>2020-08-23T16:24:03&#43;09:00</updated>
+            <published>2020-08-22T16:51:00&#43;09:00</published>
             <author>
                     <name>Connor</name>
                     <uri>https://connor-wapi.github.io/</uri>
                     <email>guido9411@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">안녕하세요 테스트입니다. 테스트다? ㅇㅇㅇㅇ
-ㅇㅇㅇ</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">이 글은 Windows를 기준으로 작성되었습니다. 하지만 Mac이나 기타 운영체제에서도 sdkmanager를 같은 방식으로 실행시키면 됩니다.
+ 최근에 구글 플레이 정책이 바뀌면서 8월부터는 Android SDK의 Target API Level이 29 이상이어야 앱을 구글 플레이 콘솔에 올릴 수 있게 되었다.
+유니티 에디터에서 Target API Level 29 또는 30을 선택하여 빌드를 돌려보면 해당 버전이 설치되어있지 않다고 업데이트를 요구하지만&amp;hellip;   막상 업데이트를 누르면 다음과 같은 에러가 뜬다.</summary>
             
-                <content type="html">&lt;h1 id=&#34;안녕하세요&#34;&gt;안녕하세요&lt;/h1&gt;
-&lt;h6 id=&#34;테스트입니다&#34;&gt;테스트입니다.&lt;/h6&gt;
-&lt;p&gt;테스트다?
-ㅇㅇㅇㅇ&lt;/p&gt;
-&lt;p&gt;ㅇㅇㅇ&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://mblogthumb-phinf.pstatic.net/20140926_176/redslate_1411741830380j5Kou_PNG/1.png?type=w2&#34; alt=&#34;screenshot&#34;&gt;&lt;/p&gt;
+                <content type="html">&lt;p&gt;&lt;em&gt;이 글은 Windows를 기준으로 작성되었습니다. 하지만 Mac이나 기타 운영체제에서도 sdkmanager를 같은 방식으로 실행시키면 됩니다.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;최근에 구글 플레이 정책이 바뀌면서 8월부터는 Android SDK의 Target API Level이 29 이상이어야 앱을 구글 플레이 콘솔에 올릴 수 있게 되었다.&lt;/p&gt;
+&lt;p&gt;유니티 에디터에서 Target API Level 29 또는 30을 선택하여 빌드를 돌려보면 해당 버전이 설치되어있지 않다고 업데이트를 요구하지만&amp;hellip;
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/api29.JPG&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;막상 업데이트를 누르면 다음과 같은 에러가 뜬다.
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/api29%282%29.JPG&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;이는 SDK 버전 업데이트를 담당하는 SDK manager가 업데이트를 위해 관리자 권한을 필요로하기 때문인데, 유니티를 관리자 권한으로 실행한다고 해결되지는 않고 SDK manager를 직접 찾아서 관리자 권한으로 업데이트를 실행시켜줘야 한다.&lt;/p&gt;
+&lt;p&gt;유니티 자체를 관리자 권한으로 실행시켜주면 바로 된다는 사람도 있는데 이렇게 되면 해피한 거고 나는 안돼서 이 방법으로 처리했다.&lt;/p&gt;
+&lt;p&gt;유니티 에디터에서 Edit &amp;gt; Preferences &amp;gt; External Tools에 들어가보면 현재 유니티가 사용하고있는 Android SDK Tools의 경로를 찾을 수 있다.
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/sdk_path.JPG&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;유니티 허브로 설치했으면 유니티 허브, 따로 설치했으면 해당 폴더 내부의 경로가 있을 것이다. 여기서 tools &amp;gt; bin을 열어보면 우리가 필요한 sdkmanager.bat파일이 있다.
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/sdk_folder.JPG&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;하지만 여기서 바로 실행시키는 건 아니고, Windows PowerShell을 관리자 권한으로 실행해서 접근해야한다. Windows + x키를 눌러 &lt;strong&gt;Windows PowerShell(관리자)&lt;/strong&gt; 를 실행시킨다.
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/powershell_admin.png&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;PowerShell을 열었으면 유니티에서 Android SDK의 경로를 복사한 뒤, 뒤에 /tools/bin을 붙여 폴더를 PowerShell에서 열어주자. 아래의 명령어를 치면 된다.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;quot;[복사한 경로]/tools/bin&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;내 기준으로는&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd &amp;quot;C:/Program Files/Unity/Hub/Editor/2019.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer\SDK/tools/bin&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;이라고 입력했다. 경로 중간에 띄어쓰기가 없으면 큰따옴표를 생략해도 되지만, 윈도우에서는 대부분 Program Files때문에 띄어쓰기가 있을테니 반드시 큰따옴표를 쳐주자.
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/powershell1.JPG&#34;/&gt; 
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;PowerShell에서 폴더를 연 후에 &lt;code&gt;./sdkmanager --list&lt;/code&gt;를 입력해 sdkmanager가 정상적으로 작동하는지 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;만약 이때 Java관련 에러가 뜨면서 sdkmanager가 실행되지 않는다면 Java 버전에 문제가 있는 것인데,
+시스템 환경 변수 편집으로 들어가서 JAVA_HOME을 유니티 허브에서 설치한 제공하는 OpenJDK의 경로로 변경해주면 된다.&lt;/strong&gt; Java 환경 변수 설정 관련은 글이 너무 길어지니까 여기선 생략.&lt;/p&gt;
+&lt;p&gt;이제 다 왔다. &lt;code&gt;./sdkmanager &amp;quot;platform-tools&amp;quot; &amp;quot;platforms;android-29&amp;quot; &amp;quot;build-tools;29.0.3&amp;quot;&lt;/code&gt;을 입력하면 무언가 동의하냐는 문서가 출력되고, 어차피 우리에게 선택권이 없으니 y를 눌러 동의하면 필요한 파일들이 모두 설치된다.
+&lt;figure&gt;
+    &lt;img src=&#34;https://connor-wapi.github.io/image/api29/accept.JPG&#34;
+         alt=&#34;어차피 개발자는 거절할 권리가 없다.&#34;/&gt; &lt;figcaption&gt;
+            &lt;p&gt;어차피 개발자는 거절할 권리가 없다.&lt;/p&gt;
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;PowerShell을 관리자 권한으로 실행하지 않았다면 여기서 오류가 나며 막힐텐데, 관리자 권한으로 다시 실행해주면 된다.&lt;/p&gt;
+&lt;p&gt;이렇게 설치를 완료하면 유니티에서 Target API Level을 29로 설정하고 빌드해도 군말없이 잘 돌아간다! 특이사항이 없어서 스크린샷은 생략.&lt;/p&gt;
 </content>
             
             
@@ -48,7 +95,7 @@
                             
                             
                             
-                                <category scheme="https://connor-wapi.github.io/categories/test/" term="test" label="test" />
+                                <category scheme="https://connor-wapi.github.io/categories/unity/" term="Unity" label="Unity" />
                             
                         
                     
@@ -58,7 +105,19 @@
                             
                             
                             
-                                <category scheme="https://connor-wapi.github.io/tags/test/" term="test" label="test" />
+                                <category scheme="https://connor-wapi.github.io/tags/unity/" term="unity" label="unity" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://connor-wapi.github.io/tags/build/" term="build" label="build" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://connor-wapi.github.io/tags/android/" term="android" label="android" />
                             
                         
                     

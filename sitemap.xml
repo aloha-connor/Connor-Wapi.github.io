@@ -3,43 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://connor-wapi.github.io/about/</loc>
-    <lastmod>2020-07-31T13:42:52+09:00</lastmod>
+    <loc>https://connor-wapi.github.io/posts/api29/</loc>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://connor-wapi.github.io/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+    <loc>https://connor-wapi.github.io/tags/android/</loc>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/tags/build/</loc>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://connor-wapi.github.io/categories/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://connor-wapi.github.io/posts/hello-world/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://connor-wapi.github.io/posts/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://connor-wapi.github.io/tags/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://connor-wapi.github.io/tags/test/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+    <loc>https://connor-wapi.github.io/categories/unity/</loc>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://connor-wapi.github.io/categories/test/</loc>
-    <lastmod>2020-07-31T17:23:09+09:00</lastmod>
+    <loc>https://connor-wapi.github.io/tags/unity/</loc>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/</loc>
+    <lastmod>2020-08-23T16:24:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://connor-wapi.github.io/about/</loc>
+    <lastmod>2020-08-02T14:43:09+09:00</lastmod>
   </url>
   
 </urlset>
